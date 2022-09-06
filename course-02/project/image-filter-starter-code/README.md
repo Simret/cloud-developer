@@ -48,10 +48,10 @@ Add your own domain name and have it point to the running services (try adding a
 > !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
 
 
-### An endpoint URL for a running elastic beanstalk deployment (EB_URL)
+### An endpoint URL for a running elastic beanstalk deployment
 
 http://udagram-yibeltal-dev.us-east-1.elasticbeanstalk.com/
 
-### An endpoint URL taht responds to valid GET request
+### An endpoint URL that responds to valid GET request
 
 http://udagram-yibeltal-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://ichef.bbci.co.uk/news/976/cpsprodpb/8F29/production/_126594663_mediaitem126594662.jpg
