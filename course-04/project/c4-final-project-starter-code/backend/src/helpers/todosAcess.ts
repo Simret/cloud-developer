@@ -69,7 +69,35 @@ export async function createTodo(todo: TodoItem): Promise<TodoItem> {
       .promise()
     return result.Attributes as TodoItem
   }
+  
+  export async function deleteTodoItem(todoId: string, userId: string): Promise<void> {
+    await docClient.delete({
+      TableName: todosTable,
+      Key: {
+        todoId,
+        userId
+      }
+    }).promise()
+  }
+  export async function deleteTodo(todoId: string, userId: string){
 
+    await docClient.delete({
+  
+        TableName : todosTable,
+  
+        Key:{
+  
+          userId: userId,
+  
+          todoId: todoId
+  
+        },
+  
+    }).promise()
+  
+  ​
+  
+  }
   function createDynamoDBClient() {
     if (process.env.IS_OFFLINE) {
       console.log('Creating a local DynamoDB instance')
